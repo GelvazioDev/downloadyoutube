@@ -75,13 +75,13 @@ app.get('/mp3old', async (req, res) => {
 })
 
 app.post('/mp3', async (req, res) => {
-  const { url } = req.body
+  const {pasta, dia, mes, ano, url } = req.body
   console.log(url)
   if (!url) {
     return res.status(400).json({ error: 'URL do vídeo é necessária' })
   }
   try {
-    const filePath = await downloadVideoMp3(url)
+    const filePath = await downloadVideoMp3(url, pasta, dia, mes, ano)
     console.log('filePath:', filePath) // Adicione este log para depuração
 
     // Retorna o caminho relativo

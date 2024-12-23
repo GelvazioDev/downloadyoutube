@@ -92,7 +92,7 @@ async function downloadVideo(url) {
   }
 }
 
-async function downloadVideoMp3(url) {
+async function downloadVideoMp3(url, pasta, dia, mes, ano) {
   if (!url || typeof url !== 'string') {
     throw new Error('URL inválida!');
   }
@@ -124,10 +124,17 @@ async function downloadVideoMp3(url) {
       .replace(/[<>:"\/\\|?*#]+/g, '') // Remover caracteres inválidos
       .replace(/[\u{1F600}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, ''); // Remover emojis e caracteres especiais
 
-    const output = path.join(__dirname, 'musicas', `${title}.mp3`);
+    // pasta atual 
+    // const output = path.join(__dirname, 'musicas', `${title}.mp3`);
+    // if (!fs.existsSync(path.join(__dirname, 'musicas'))) {
+    //   fs.mkdirSync(path.join(__dirname, 'musicas'));
+    // }
 
-    if (!fs.existsSync(path.join(__dirname, 'musicas'))) {
-      fs.mkdirSync(path.join(__dirname, 'musicas'));
+    //  nova pasta
+    const nomePasta = 'musicas/' + pasta + '_' + dia + '_' + mes + '_' + ano;
+    const output = path.join(__dirname,  nomePasta, `${title}.mp3`);
+    if (!fs.existsSync(path.join(__dirname, nomePasta))) {
+      fs.mkdirSync(path.join(__dirname, nomePasta));
     }
 
     return new Promise((resolve, reject) => {

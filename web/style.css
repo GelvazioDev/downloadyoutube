@@ -133,3 +133,26 @@ h1 {
   border-radius: 4px;
   word-break: break-all;
 }
+
+/* Add to existing CSS */
+.genre-select {
+  padding: 12px;
+  border: 2px solid #3a3a3a;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.genre-select:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.genre-select option {
+  background-color: #2a2a2a;
+  color: white;
+}

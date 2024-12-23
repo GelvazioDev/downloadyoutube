@@ -11,11 +11,22 @@
       <div class="container">
         <h1>Video Downloader</h1>
         <div class="download-form">
+          <select id="genreSelect" class="genre-select">
+            <option value="">Select Genre</option>
+            <option value="sertanejo" selected>Sertanejo</option>
+            <option value="dance">dance</option>
+            <option value="pagode">pagode</option>
+            <option value="funk">funk</option>
+            <option value="rap">rap</option>
+            <option value="poprock">poprock</option>
+            <option value="internacional">internacional</option>
+          </select>
           <input 
             type="text" 
             id="videoUrl" 
             placeholder="Enter video URL here..."
             class="url-input"
+            value="https://www.youtube.com/watch?v=iz1rIp1-b-Y&list=PLOhV0FrFphUfIgAAcfWnAJuLwvOvY0t7S&index=5"
           >
           <button id="downloadBtn" class="download-btn">
             Download MP3
