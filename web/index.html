@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>Video Downloader</h1>
+        <div class="download-form">
+          <input 
+            type="text" 
+            id="videoUrl" 
+            placeholder="Enter video URL here..."
+            class="url-input"
+          >
+          <button id="downloadBtn" class="download-btn">
+            Download MP3
+          </button>
+        </div>
+        <div id="status" class="status"></div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
